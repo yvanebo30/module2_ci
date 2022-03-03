@@ -1,6 +1,6 @@
 pipeline{
 	agent any
-	tools {maven 'maven'}
+	tools { maven 'maven'}
 	stages{
 		stage('git-clone'){
 			steps{
