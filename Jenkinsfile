@@ -14,7 +14,7 @@ pipeline{
         sh 'mvn -v'
       }
     }
-   stage('Build Artifact - Maven') {
+    stage('Build Artifact - Maven') {
       steps {
         sh "mvn clean package -DskipTests=true"
         archive 'target/*.jar'
@@ -31,7 +31,7 @@ pipeline{
         }
       }
     }
-   stage('Mutation Tests - PIT') {
+    stage('Mutation Tests - PIT') {
       steps {
         sh "mvn org.pitest:pitest-maven:mutationCoverage"
       }
